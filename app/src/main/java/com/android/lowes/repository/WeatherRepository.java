@@ -27,9 +27,7 @@ public class WeatherRepository {
             mWeatherApiCLient = WeatherApiClient.getInstance();
         }
 
-//        public LiveData<List<WeatherResponse>> getWeathers(){
-//            return mWeatherApiCLient.getWeathers();
-//        }
+
 
     public LiveData<List<WeatherDetails>> getWeathers(){
             return mWeatherApiCLient.getWeathers();

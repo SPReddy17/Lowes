@@ -26,7 +26,6 @@ public class WeatherApiClient {
     private static WeatherApiClient instance;
 
 
-//    private MutableLiveData<List<WeatherResponse>> mWeathers;
 private MutableLiveData<List<WeatherDetails>> mWeathers;
     private RetrieveWeatherRunnable mRetreiveWeatherRunnable;
 
@@ -42,9 +41,6 @@ private MutableLiveData<List<WeatherDetails>> mWeathers;
         mWeathers = new MutableLiveData<>();
     }
 
-//    public LiveData<List<WeatherResponse>> getWeathers(){
-//        return mWeathers;
-//    }
     public LiveData<List<WeatherDetails>> getWeathers(){
         return mWeathers;
     }
@@ -88,9 +84,7 @@ private MutableLiveData<List<WeatherDetails>> mWeathers;
                 if(response.code() == 200){
                     List<WeatherDetails> list = new ArrayList<>(((WeatherSearchResponse)response.body()).getWeathers());
 
-                      //  List<WeatherDetails> currentWeather = mWeathers.getValue();
 
-                     //   currentWeather.addAll(list);
                         mWeathers.postValue(list);
 
                 }

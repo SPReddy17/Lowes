@@ -18,9 +18,7 @@ public class WeatherListViewModel extends ViewModel {
         mWeatherRepository = WeatherRepository.getInstance();
     }
 
-//    public LiveData<List<WeatherResponse>> getWeathers() {
-//        return mWeatherRepository.getWeathers();
-//    }
+
 public LiveData<List<WeatherDetails>> getWeathers() {
     return mWeatherRepository.getWeathers();
 }

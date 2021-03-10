@@ -20,8 +20,6 @@ public class WeatherDetailActivity extends AppCompatActivity {
 
     private static final String TAG = "WeatherDetailActivity";
 
-    private String temperature, feelsTemperature;
-    private int tem,feelTem;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,16 +34,5 @@ public class WeatherDetailActivity extends AppCompatActivity {
         main.setText(bundle.getString("main"));
         description.setText(bundle.getString("description"));
     }
-
-
-//    private void getIncomingIntent(){
-////        if(getIntent().hasExtra("WeatherDetails") && getIntent().hasExtra("position")){
-////            WeatherDetails weather ;
-////            Bundle bundle = getIntent().getExtras();
-////            position = bundle.getInt("position");
-////
-////            weather = getIntent().getParcelableExtra("WeatherDetails");
-////            Log.d(TAG, "getIncomingIntent: " + weather.getWeather().get(position));
-////        }
-//    }
+    
 }

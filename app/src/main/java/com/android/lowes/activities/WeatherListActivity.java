@@ -54,13 +54,6 @@ public class WeatherListActivity extends AppCompatActivity  implements OnWeather
     }
     private void subscribeObservers(){
 
-//       mWeatherListViewModel.getWeathers().observe(this, new Observer<List<WeatherResponse>>() {
-//           @Override
-//           public void onChanged(List<WeatherResponse> weatherResponses) {
-//
-//           }
-//       });
-
         mWeatherListViewModel.getWeathers().observe(this, new Observer<List<WeatherDetails>>() {
             @Override
             public void onChanged(List<WeatherDetails> weatherDetails) {
@@ -88,43 +81,7 @@ public class WeatherListActivity extends AppCompatActivity  implements OnWeather
     }
 
     private void testRetrofitRequest() {
-
        searchWeathersApi(weatherQuery);
-//        WeatherApi weatherApi = ServiceGenerator.getWeatherApi();
-//        // Do search using Retrofit
-//        Call<WeatherSearchResponse> responseCall = weatherApi
-//                .searchWeather(
-//                        "naruto",
-//                        Constants.API_KEY
-//                );
-//
-//        responseCall.enqueue(new Callback<WeatherSearchResponse>() {
-//            @Override
-//            public void onResponse(Call<WeatherSearchResponse> call, Response<WeatherSearchResponse> response) {
-//                Log.d(TAG, "onResponse: Server Response: " + response.toString());
-//                if(response.code() == 200){
-//                    Log.d(TAG, "onResponse: " + response.body().toString());
-//                    List<WeatherDetails> weather = new ArrayList<>(response.body().getWeathers());
-//                    for(WeatherDetails weth: weather){
-//                        Log.d(TAG, "onResponse: " + weth.toString());
-//                    }
-//                }
-//                else {
-//                    try {
-//                        Log.d(TAG, "onResponse: " + response.errorBody().string());
-//                    } catch (IOException e) {
-//                        e.printStackTrace();
-//                    }
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<WeatherSearchResponse> call, Throwable t) {
-//
-//            }
-//        });
-//    }
-
        }
 
     @Override
@@ -137,8 +94,5 @@ public class WeatherListActivity extends AppCompatActivity  implements OnWeather
         startActivity(intent);
     }
 
-    @Override
-    public void onCategoryClick(String category) {
 
-    }
 }

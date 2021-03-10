@@ -31,17 +31,14 @@ public class Weather  implements Parcelable {
         }
     };
 
-    //    @Override
-//    public String toString() {
-//        return "Weather{" +
-//                "main='" + main + '\'' +
-//                ", description='" + description + '\'' +
-//                '}';
-//    }
-    @Override
+        @Override
     public String toString() {
-        return main;
+        return "Weather{" +
+                "main='" + main + '\'' +
+                ", description='" + description + '\'' +
+                '}';
     }
+
 
 
     public String getMain() {
