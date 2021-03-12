@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.android.lowes.R
+import kotlin.jvm.java as java
 
 class MainActivity : AppCompatActivity() {
     private var searchButton: Button? = null
