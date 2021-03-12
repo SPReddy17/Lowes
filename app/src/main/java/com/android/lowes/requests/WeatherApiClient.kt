@@ -68,17 +68,6 @@ class WeatherApiClient private constructor() {
 
     }
 
-//    companion object {
-//        private const val TAG = "WeatherApiClient"
-//        var instance: WeatherApiClient? = null
-//            get() {
-//                if (field == null) {
-//                    field = WeatherApiClient()
-//                }
-//                return field
-//            }
-//            private set
-//    }
 
     init {
         mWeathers = MutableLiveData()

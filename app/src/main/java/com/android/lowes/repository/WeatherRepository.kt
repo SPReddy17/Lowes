@@ -25,16 +25,7 @@ class WeatherRepository private constructor() {
     companion object {
         val instance: WeatherRepository by lazy { HOLDER.INSTANCE }
     }
-//    companion object Instance {
-//        var instance: WeatherRepository? = null
-//            get() {
-//                if (field == null) {
-//                    field = WeatherRepository()
-//                }
-//                return field
-//            }
-//            private set
-//    }
+
 
     init {
         mWeatherApiCLient = WeatherApiClient.instance
